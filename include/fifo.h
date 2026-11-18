@@ -8,4 +8,11 @@ struct request_msg {
     uint32_t handled_by;
 };
 
+struct task_args
+{
+    QueueHandle_t request;
+    QueueHandle_t response;
+    int id;
+};
+
 void fifo_worker_handler(QueueHandle_t requests, QueueHandle_t results, int id);
