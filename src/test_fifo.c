@@ -15,13 +15,6 @@
 
 int setup_pool;
 
-struct task_args
-{
-    QueueHandle_t request;
-    QueueHandle_t response;
-    int id;
-};
-
 TaskHandle_t supervisor_thread;
 TaskHandle_t worker_threads[THREAD_COUNT];
 struct task_args worker_args[THREAD_COUNT];
